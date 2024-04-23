@@ -8,6 +8,7 @@ class Insertion_Sort {
 
 
         System.out.println(arr.length);
+        
         for(int i=1;i<arr.length;i++){
             for(int j=i;j>0;j--){
                 if(arr[j]<arr[j-1]){
@@ -18,6 +19,7 @@ class Insertion_Sort {
             }
 
         }
+
         for(int i:arr){
             System.out.print(i+" ");
         }
