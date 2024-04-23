@@ -2,9 +2,9 @@ class Quick_Sort {
 
     public static int partition(int arr[], int low, int high) {
         int pivot = arr[high];
-        int i = low-1;
+        int i = low-1; // this to count and preserve space for elements less than the pivot
 
-        for(int j=low; j<high; j++) {
+        for(int j=low; j<high; j++) { // this for loop to transfer all small elements before the pivot
             if(arr[j] < pivot) {
                 i++;
                 //swap
@@ -13,11 +13,13 @@ class Quick_Sort {
                 arr[j] = temp;
             }
         }
-        i++;
+
+        i++; // this to place the pivot at correct pos
         int temp = arr[i];
         arr[i] = pivot;
         arr[high] = temp;
-        return i;
+
+        return i; // returning the pivot index
     }
     static void quickSort(int arr[], int low, int high){
         if(low < high) {

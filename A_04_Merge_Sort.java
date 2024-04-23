@@ -24,10 +24,13 @@ class MergeSort{
         int x=0;
         while(index1<=mid && index2<=ei){
             if(arr[index1]<=arr[index2]){
-                merged_arr[x++]=arr[index1++];
-                // x++;index1++;
+                merged_arr[x]=arr[index1];
+                x++;
+                index1++;
             }else{
-                merged_arr[x++]=arr[index2++];
+                merged_arr[x]=arr[index2];
+                x++;
+                index2++;
             }
         }
         // this is for the remaing element in either of the two divided array when the other array become empty
